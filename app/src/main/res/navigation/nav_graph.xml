@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph"
+            app:startDestination="@+id/actionStartup">
+
+    <fragment android:name="nkanyiso.hlela.com.mycurreny.ui.startup.StartupFragment" android:id="@+id/actionStartup"
+              tools:layout="@layout/startup_fragment">
+
+        <action android:id="@+id/action_Startup_to_actionCurrencyDetail"
+                app:destination="@id/actionCurrencyDetail"/>
+        <action android:id="@+id/action_Startup_to_actionAddCurrency"
+                app:destination="@id/actionAddCurrency"/>
+        <action android:id="@+id/action_Startup_to_actionCurrencyConverter"
+                app:destination="@id/actionCurrencyConverter"/>
+    </fragment>
+
+    <fragment
+            android:name="nkanyiso.hlela.com.mycurreny.ui.currencyDetail.CurrencyDetailFragment"
+            android:id="@+id/actionCurrencyDetail"
+
+              tools:layout="@layout/currency_detail_fragment">
+
+    </fragment>
+
+    <fragment android:name="nkanyiso.hlela.com.mycurreny.ui.addcurrency.AddCurrencyFragment" android:id="@+id/actionAddCurrency"
+              tools:layout="@layout/add_currency_fragment">
+
+    </fragment>
+    <fragment android:name="nkanyiso.hlela.com.mycurreny.ui.currencyConverter.CurrencyConverterFragment"
+              android:id="@+id/actionCurrencyConverter"
+              tools:layout="@layout/currency_converter_fragment">
+
+    </fragment>
+</navigation>
