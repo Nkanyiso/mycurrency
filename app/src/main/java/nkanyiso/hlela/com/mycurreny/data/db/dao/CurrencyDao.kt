@@ -10,7 +10,7 @@ import nkanyiso.hlela.com.mycurreny.data.db.entity.CurrencyEntity
 @Dao
 interface CurrencyDao {
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun insertAll(vararg currency: CurrencyEntity): List<Long>
 
     @Query("SELECT * FROM $CURRENCY_TABLE_NAME WHERE monitored = :B")
