@@ -1,6 +1,7 @@
 package nkanyiso.hlela.com.mycurreny.ui.startup
 
 
+import android.app.Application
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -33,7 +34,10 @@ class StartupFragment : androidx.fragment.app.Fragment(), CurrencyAdapter.ItemCl
         val view = inflater.inflate(R.layout.startup_fragment, container, false)
 
 
-        viewModel = ViewModelProviders.of(this).get(StartViewModel::class.java)
+
+
+        viewModel = ViewModelProviders.of(this).get(StartViewModel()::class.java)
+
         val currencyAdapter = CurrencyAdapter(mutableListOf(), that)
         view.recycler_monitored?.apply {
             layoutManager = LinearLayoutManager(requireContext())
